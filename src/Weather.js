@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import axios from "axios";
+import FormattedDate from "./FormattedDate";
 import "./Weather.css";
 
 export default function Weather(props) {
@@ -18,7 +19,6 @@ export default function Weather(props) {
       maxTemp: response.data.main.temp_max,
       minTemp: response.data.main.temp_min,
       feelsLike: response.data.main.feels_like,
-      date: "Mon October 11, 2:00pm",
     });
   }
 
@@ -52,13 +52,15 @@ export default function Weather(props) {
                 id="weather-image-today"
                 src={weatherData.icon}
                 className="weather-size"
-                alt=""
+                alt={weatherData.description}
               />
             </div>
           </div>
           <div className="row">
             <div className="col-6">
-              <h6 className="date-time">{weatherData.date}</h6>
+              <h6 className="date-time">
+                <FormattedDate />
+              </h6>
             </div>
             <div className="col-6">
               <h6 className="feels-like" id="feels-like-temp">
