@@ -1,51 +1,19 @@
 import React from "react";
-import FormattedDate from "./FormattedDate";
+
+import WeatherTemperature from "./WeatherTemperature";
 
 export default function WeatherInfo(props) {
   return (
     <div className="WeatherInfo">
-      <div className="row">
-        <div className="col-sm-4 daily-temp">
-          <h1>{Math.round(props.data.temperature)}°C</h1>
-        </div>
-        <div className="col-sm-4 daily-temp">
-          <div className="high-low">
-            <sup id="high">{Math.round(props.data.maxTemp)}</sup>/
-            <sub id="low">{Math.round(props.data.minTemp)}</sub>
-          </div>
-          <div className="alter-ego">
-            <sup>
-              <a href="/" id="celsius-link" className="temp-link">
-                °C
-              </a>{" "}
-              |
-              <a href="/" id="fahrenheit-link" className="temp-link">
-                °F
-              </a>
-            </sup>
-          </div>
-        </div>
-        <div className="col-sm-4 daily-temp">
-          <img
-            id="weather-image-today"
-            src={props.data.icon}
-            className="weather-size"
-            alt={props.data.description}
-          />
-        </div>
-      </div>
-      <div className="row">
-        <div className="col-6">
-          <h6 className="date-time">
-            <FormattedDate />
-          </h6>
-        </div>
-        <div className="col-6">
-          <h6 className="feels-like" id="feels-like-temp">
-            Feels Like {Math.round(props.data.feelsLike)}°
-          </h6>
-        </div>
-      </div>
+      <WeatherTemperature
+        celsius={props.data.temperature}
+        max={props.data.maxTemp}
+        min={props.data.minTemp}
+        weatherIcon={props.data.icon}
+        iconDescription={props.data.description}
+        feelsLikeTemp={props.data.feelsLike}
+      />
+
       <h2>{props.data.city}</h2>
 
       <h3>{props.data.description}</h3>
