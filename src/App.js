@@ -7,13 +7,21 @@ function App() {
       <div className="container">
         <Weather defaultCity="White Rock" />
         <footer>
-          This project was coded by Roberta Obilie and is{" "}
+          This project was coded by Roberta Obilie and is open-sourced on{" "}
           <a
             href="https://github.com/robilie/react-weather-search-homework.git"
             target="_blank"
             rel="noreferrer"
           >
-            open-sourced on github
+            Github
+          </a>{" "}
+          and hosted on{" "}
+          <a
+            href="https://vigorous-ramanujan-ccbdc5.netlify.app"
+            target="_blank"
+            rel="noreferrer"
+          >
+            Netlify
           </a>
         </footer>
       </div>
