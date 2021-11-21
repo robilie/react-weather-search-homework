@@ -25,7 +25,7 @@ export default function WeatherInfo(props) {
           <div className="card">
             <img
               src="https://cdn-icons-png.flaticon.com/512/219/219816.png"
-              class="card-img-top"
+              className="card-img-top"
               alt="humidity"
             />
             <div className="card-body">
