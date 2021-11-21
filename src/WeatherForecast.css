@@ -1,0 +1,18 @@
+.WeatherForecast-temperature-min {
+  opacity: 0.6;
+  margin-left: 5px;
+}
+
+.forecast {
+  text-align: center;
+}
+
+.WeatherForecast .next-day {
+  font-family: "KoHo", sans-serif;
+  font-size: 15px;
+}
+
+.WeatherForecast img {
+  height: 80px;
+  width: 80px;
+}
