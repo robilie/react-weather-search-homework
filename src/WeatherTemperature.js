@@ -10,13 +10,12 @@ export default function WeatherTemperature(props) {
         </div>
         <div className="col-sm-4 daily-temp">
           <div className="high-low">
-            <sup id="high">{Math.round(props.max)}°</sup>/
-            <sub id="low">{Math.round(props.min)}°</sub>
+            <sup className="high">{Math.round(props.max)}°</sup>/
+            <sub className="low">{Math.round(props.min)}°</sub>
           </div>
         </div>
         <div className="col-sm-4 daily-temp">
           <img
-            id="weather-image-today"
             src={props.weatherIcon}
             className="weather-size"
             alt={props.iconDescription}

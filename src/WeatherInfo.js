@@ -32,7 +32,10 @@ export default function WeatherInfo(props) {
               <p className="card-text">
                 Humidity
                 <br />
-                <span id="humidity">{Math.round(props.data.humidity)} </span>%
+                <span className="humidity">
+                  {Math.round(props.data.humidity)}{" "}
+                </span>
+                %
               </p>
             </div>
           </div>
