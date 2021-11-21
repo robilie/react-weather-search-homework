@@ -19,7 +19,17 @@ export default function WeatherForecast(props) {
         <h4>NEXT 5 DAYS</h4>
 
         <div className="card-group forecast">
-          <WeatherForecastDay data={forecast[0]} />
+          {forecast.map(function (dailyForecast, index) {
+            if (0 < index && index < 6) {
+              return (
+                <div key={index}>
+                  <WeatherForecastDay data={dailyForecast} />;
+                </div>
+              );
+            } else {
+              return null;
+            }
+          })}
         </div>
       </div>
     );
