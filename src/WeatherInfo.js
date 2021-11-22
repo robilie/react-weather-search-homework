@@ -52,7 +52,10 @@ export default function WeatherInfo(props) {
               <p className="card-text">
                 Wind
                 <br />
-                <span id="wind-speed"> {Math.round(props.data.wind)}</span>
+                <span className="wind-speed">
+                  {" "}
+                  {Math.round(props.data.wind)}
+                </span>
                 <sub>km/hr </sub>
               </p>
             </div>
